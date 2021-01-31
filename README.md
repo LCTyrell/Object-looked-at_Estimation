@@ -1,4 +1,4 @@
-# Object_looked_at-Estimation
+# Object-looked-at Estimation
 Model that estimate the object you look at
 
 
