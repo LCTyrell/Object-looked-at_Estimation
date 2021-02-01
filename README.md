@@ -14,7 +14,7 @@ Work In Progress...
 
 The model currently run at 24 FPS (on i7-8700 host).
 
-**Detection of Gaze/Detection-BBox intersection:**  
+**Intersection detection between detection-bboxs and gaze:**  
 
 ![blue](utils/OLAE_1.gif)
 
