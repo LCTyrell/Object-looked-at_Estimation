@@ -8,13 +8,13 @@ Work In Progress...
 
 ### First test on mono camera (OAK-1)
 
-*Gaze estimation + Mobilenet-SSD:* 
+**Gaze estimation + Mobilenet-SSD:** 
 
 ![blue](utils/blue3.gif)
 
 The model currently run at 24 FPS (on i7-8700 host).
 
-*Detection of Gaze/Detection-BBox intersection*  
+**Detection of Gaze/Detection-BBox intersection:**  
 
 ![blue](utils/OLAE_1.gif)
 
