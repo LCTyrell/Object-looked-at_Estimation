@@ -14,9 +14,12 @@ Work In Progress...
 
 The model currently run at 24 FPS (on i7-8700 host).
 
+*Detection of Gaze/Detection-BBox intersection*  
+
+![blue](utils/OLAE_1.gif)
+
 #### TODO
 
-* Detection of Gaze/Detection-BBox intersection
 * Integration of Midas V2 model (MonoDepth)
 
 Midas V2 running on NCS2:  
