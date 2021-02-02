@@ -6,6 +6,12 @@ Model that estimate the object you look at
 
 Work In Progress...  
 
+**Run:**  
+
+`python3 gaze_ssd.py -vid <video_path>`  
+or
+`python3 gaze_ssd.py -cam`
+
 ### First test on mono camera (OAK-1)
 
 **Gaze estimation + Mobilenet-SSD:** 
