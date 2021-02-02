@@ -12,6 +12,10 @@ Work In Progress...
 or
 `python3 gaze_ssd.py -cam`
 
+**Warning:**
+There is a lag on the camera since the last commit.
+Use video instead.
+
 ### First test on mono camera (OAK-1)
 
 **Gaze estimation + Mobilenet-SSD:** 
