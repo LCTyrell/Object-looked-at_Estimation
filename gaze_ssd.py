@@ -9,7 +9,7 @@ import numpy as np
 from imutils.video import FPS
 from math import cos, sin
 
-#from utilz import isLooked #######################################
+from utilz import isLooked #######################################
 
 
 parser = argparse.ArgumentParser()
@@ -359,8 +359,8 @@ class Main:
    
                         beam_img = np.zeros(self.debug_frame.shape, np.uint8)
                         for t in range(20)[::-2]:
-                            cv2.line(beam_img, (re_x, re_y), ((re_x + x*50), (re_y - y*50)), (0, 0, 255-t*10), t*2)
-                            cv2.line(beam_img, (le_x, le_y), ((le_x + x*50), (le_y - y*50)), (0, 0, 255-t*10), t*2)
+                            cv2.line(beam_img, (re_x, re_y), ((re_x + x*100), (re_y - y*100)), (0, 0, 255-t*10), t*2)
+                            cv2.line(beam_img, (le_x, le_y), ((le_x + x*100), (le_y - y*100)), (0, 0, 255-t*10), t*2)
                         self.debug_frame |= beam_img 
             
                 else:            
@@ -395,14 +395,27 @@ class Main:
                             label="Label: "
                             # for each bounding box, we first normalize it to match the frame size
                             det_bbox = frame_norm(self.frame, raw_det_bbox[3:7])
-                            label=labels_[int(raw_det_bbox[1])-1]
-                            # and then draw a rectangle on the frame to show the actual result
-                            #if isLooked().bbox() | isLooked().bbox(): # left or right eye
-                                #color=(0, 0, 255)
-                            #else: color=(255, 0, 0)
-                            color=(255, 0, 0)
-                            cv2.rectangle(self.debug_frame, (det_bbox[0], det_bbox[1]), (det_bbox[2], det_bbox[3]), color, 2)
-                            cv2.putText(self.debug_frame, label, (det_bbox[0], det_bbox[3]-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+                            
+                            label_id=int(raw_det_bbox[1])-1
+                            label=labels_[label_id]
+                            if self.gaze is not None and self.left_bbox is not None and self.right_bbox is not None:
+                                x, y = (self.gaze * 100).astype(int)[:2]
+                                re_x = (self.right_bbox[0] + self.right_bbox[2]) // 2
+                                re_y = (self.right_bbox[1] + self.right_bbox[3]) // 2
+                                le_x = (self.left_bbox[0] + self.left_bbox[2]) // 2
+                                le_y = (self.left_bbox[1] + self.left_bbox[3]) // 2
+                                bbox_pt1=(det_bbox[0],det_bbox[1])
+                                bbox_pt2=(det_bbox[2],det_bbox[3])
+                                
+                                if isLooked((le_x, le_y),(le_x + x*100, le_y - y*100),bbox_pt1,bbox_pt2).bbox() | isLooked((re_x, re_y),(re_x + x*100, re_y - y*100),bbox_pt1,bbox_pt2).bbox(): # left or right eye
+                                    color=(0, 0, 255)
+                                else: color=(255, 0, 0)
+                                #color=(255, 0, 0)
+
+                                if not label_id==14:
+
+                                   cv2.rectangle(self.debug_frame, (det_bbox[0], det_bbox[1]), (det_bbox[2], det_bbox[3]), color, 2)
+                                   cv2.putText(self.debug_frame, label, (det_bbox[0], det_bbox[3]-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
                         # After all the drawing is finished, we show the frame on the screen
                         #cv2.imshow("preview", self.debug_frame)
                     
