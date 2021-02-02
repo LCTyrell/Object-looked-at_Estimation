@@ -13,7 +13,7 @@ or
 `python3 gaze_ssd.py -cam`
 
 **Warning:**
-There is a lag on the camera since the last commit.
+There is a lag when using the camera.
 Use video instead.
 
 ### First test on mono camera (OAK-1)
