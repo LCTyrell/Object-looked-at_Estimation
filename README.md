@@ -12,9 +12,6 @@ Work In Progress...
 or
 `python3 gaze_ssd.py -cam`
 
-**Warning:**
-There is a lag when using the camera.
-Use video instead.
 
 ### First test on mono camera (OAK-1)
 
@@ -22,7 +19,9 @@ Use video instead.
 
 ![blue](utils/blue3.gif)
 
-The model currently run at 24 FPS (on i7-8700 host).
+The model currently run at (on i7-8700 host):  
+* 24 FPS with video input from host  
+* 18 FPS with onboard camera
 
 **Intersection detection between detection-bboxs and gaze:**   
 
