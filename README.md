@@ -12,6 +12,10 @@ Work In Progress...
 or
 `python3 gaze_ssd.py -cam`
 
+**Warning:**
+There is a lag when using the camera.
+Use video instead.
+
 ### First test on mono camera (OAK-1)
 
 **Gaze estimation + Mobilenet-SSD:** 
@@ -20,8 +24,7 @@ or
 
 The model currently run at 24 FPS (on i7-8700 host).
 
-**Intersection detection between detection-bboxs and gaze:**  
-(commit pending, for debugging)  
+**Intersection detection between detection-bboxs and gaze:**   
 
 ![blue2](utils/OLAE_1.gif)  
 
