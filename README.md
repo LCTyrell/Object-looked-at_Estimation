@@ -5,6 +5,7 @@ Model that estimate the object you look at
 ## DepthAI version
 
 Work In Progress...  
+The model still only works with one person on the video.
 
 **Run:**  
 
