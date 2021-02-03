@@ -117,6 +117,7 @@ def create_pipeline():
     face_nn.setBlobPath(str(Path("models/face-detection-retail-0004/face-detection-retail-0004.blob").resolve().absolute()))
 
     if camera:
+        face_nn.setNumPoolFrames(1)
         cam.preview.link(face_nn.input)
     else:
         face_in = pipeline.createXLinkIn()
