@@ -1,6 +1,8 @@
 # Object-looked-at Estimation
 Model that estimate the object you look at
 
+## Openvino version  
+To come...
 
 ## DepthAI ([Luxonis](https://luxonis.com/depthai)) version 
 
