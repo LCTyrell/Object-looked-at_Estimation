@@ -4,8 +4,9 @@ Model that estimate the object you look at
 
 ## DepthAI version
 
-Work In Progress...  
-The model still only works with one person on the video and fo short distance.
+Work In Progress...    
+Still a lot of work before we have something fully functional. Any contribution is welcome!  
+The model currently only works with one person on video and at close range.  
 
 **Model sources:**  
 * Gaze estimation: [https://github.com/luxonis/depthai-experiments/tree/master/gaze-estimation](https://github.com/luxonis/depthai-experiments/tree/master/gaze-estimation)  
