@@ -5,7 +5,9 @@ Model that estimate the object you look at
 ## DepthAI version
 
 Work In Progress...    
-Still a lot of work before we have something fully functional. Any contribution is welcome!  
+Still a lot of work before we have something fully functional. Any contribution is welcome!   
+The gaze estimation model needs to be improved, but the first goal here is to make a functional pipeline.  
+  
 The model currently only works with one person on video and at close range.  
 
 **Model sources:**  
