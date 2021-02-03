@@ -2,7 +2,7 @@
 Model that estimate the object you look at
 
 
-## DepthAI version
+## DepthAI ([Luxonis](https://luxonis.com/depthai)) version 
 
 **Warnings:**  
 Work In Progress...      
