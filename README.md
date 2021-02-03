@@ -5,7 +5,11 @@ Model that estimate the object you look at
 ## DepthAI version
 
 Work In Progress...  
-The model still only works with one person on the video.
+The model still only works with one person on the video and fo short distance.
+
+**Model sources:**  
+* Gaze estimation: [https://github.com/luxonis/depthai-experiments/tree/master/gaze-estimation](https://github.com/luxonis/depthai-experiments/tree/master/gaze-estimation)  
+* Mobilenet-SSD: [https://github.com/luxonis/depthai-tutorials/tree/master/1-hello-world](https://github.com/luxonis/depthai-tutorials/tree/master/1-hello-world)  
 
 **Run:**  
 
