@@ -43,5 +43,5 @@ The model currently run at (on i7-8700 host):
 
 * Integration of Midas V2 model (MonoDepth)
 
-Midas V2 running on NCS2:  
-![midas](utils/midasv2_ncs2.gif)
+Midas V2 + Mobilenet-SSD running on NCS2:  
+![midas](utils/midas2_ssd.gif)
